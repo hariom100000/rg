@@ -1,6 +1,10 @@
 resource_groups = {
-  "rg" = {
-    name     = "rg1"
+  "rg1" = {
+    name     = "rg-har"
+    location = "eastus"
+  }
+  "rg2" = {
+    name     = "rg-hari"
     location = "eastus"
   }
 }
