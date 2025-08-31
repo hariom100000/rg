@@ -25,7 +25,10 @@ az version'''
 
     stage('az-login') {
       steps {
-        sh 'az login --service-principal serviceprincipal'
+        sh '''az login --service-principal \\
+            --username "$AZURE_CLIENT_ID" \\
+            --password "$AZURE_CLIENT_SECRET" \\
+            --tenant "$AZURE_TENANT_ID"'''
       }
     }
 
