@@ -33,4 +33,7 @@ az version'''
     }
 
   }
+  environment {
+    AZURE_CREDENTIALS = 'credentials(\'serviceprincipal\')'
+  }
 }
