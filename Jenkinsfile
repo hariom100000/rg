@@ -43,5 +43,11 @@ az login --service-principal \\
       }
     }
 
+    stage('terraform-apply') {
+      steps {
+        sh 'terraform apply -auto-approve'
+      }
+    }
+
   }
 }
