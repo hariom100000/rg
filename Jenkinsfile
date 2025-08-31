@@ -15,5 +15,11 @@ sudo yum -y install terraform'''
       }
     }
 
+    stage('terraform-plan') {
+      steps {
+        sh 'terraform plan'
+      }
+    }
+
   }
 }
