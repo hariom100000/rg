@@ -24,7 +24,8 @@ az version'''
         AZURE_TENANT_ID = '\'e89b9cb6-ceb6-41ac-8dcc-950ebbc47dae\''
       }
       steps {
-        sh 'az login --service-principal --username $AZURE_CLIENT_ID --password $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID'
+        sh '''az login --service-principal --username $(echo $AZURE_CLIENT_ID) --password $(echo $AZURE_CLIENT_SECRET) --tenant $(echo $AZURE_TENANT_ID)
+'''
       }
     }
 
