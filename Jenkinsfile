@@ -9,15 +9,17 @@ sudo yum -y install terraform'''
       }
     }
 
-    stage('terraform-init') {
+    stage('azure-cli -install') {
       steps {
-        sh 'terraform init'
+        sh '''sudo dnf install -y https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
+sudo dnf install azure-cli -y
+az version'''
       }
     }
 
-    stage('terraform-plan') {
+    stage('terraform-init') {
       steps {
-        sh 'terraform plan'
+        sh 'terraform init'
       }
     }
 
