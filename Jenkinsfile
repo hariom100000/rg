@@ -12,7 +12,7 @@ sudo yum -y install terraform'''
     stage('azure-cli -install') {
       steps {
         sh '''sudo dnf install -y https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
-sudo dnf install azure-cli -y
+sudo dnf install azure-cli-2.44.1-1.el8 -y
 az version'''
       }
     }
