@@ -9,5 +9,11 @@ sudo yum -y install terraform'''
       }
     }
 
+    stage('terraform-init') {
+      steps {
+        sh 'terraform init'
+      }
+    }
+
   }
 }
