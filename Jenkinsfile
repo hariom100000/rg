@@ -39,13 +39,8 @@ az login --service-principal \\
 
     stage('terraform-plan') {
       steps {
-        sh 'terraform plan'
-      }
-    }
-
-    stage('terraform-apply') {
-      steps {
-        sh 'terraform apply -auto-approve'
+        sh '''terraform plan
+terraform apply -auto-approve'''
       }
     }
 
