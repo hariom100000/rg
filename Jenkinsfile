@@ -38,7 +38,4 @@ az login --service-principal \\
     }
 
   }
-  environment {
-    AZURE_CREDENTIALS = 'credentials(\'serviceprincipal\')'
-  }
 }
