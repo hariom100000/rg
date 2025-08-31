@@ -23,9 +23,9 @@ az version'''
       }
     }
 
-    stage('terraform-plan') {
+    stage('az-login') {
       steps {
-        sh 'terraform plan'
+        sh 'az login --service-principal serviceprincipal'
       }
     }
 
