@@ -37,5 +37,11 @@ az login --service-principal \\
       }
     }
 
+    stage('terraform-plan') {
+      steps {
+        sh 'terraform plan'
+      }
+    }
+
   }
 }
