@@ -30,4 +30,7 @@ az version'''
     }
 
   }
+  environment {
+    AZURE_CREDS = 'serviceprincipal'
+  }
 }
